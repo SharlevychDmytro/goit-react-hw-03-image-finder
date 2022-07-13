@@ -26,11 +26,11 @@ export class Modal extends Component {
     }
   };
   render() {
-    const data = this.props.data[0];
+    const { largeImageURL, id } = this.props.data[0];
     return createPortal(
       <Overlay onClick={this.handleBackdropClick}>
         <ModalStyled>
-          <img src={data.largeImageURL} alt={data.id} />
+          <img src={largeImageURL} alt={id} />
         </ModalStyled>
       </Overlay>,
       modalRoot
